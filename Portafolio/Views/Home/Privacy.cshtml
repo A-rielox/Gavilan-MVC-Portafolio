@@ -1,0 +1,55 @@
+﻿@* @model string;  *@
+@* para enviar del controller a la vista un string -> return View("Index", "Pepillo"); *@
+
+@model Persona;
+
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+    // lo ocupa en el layout para el nombre de la pestaña, aqui lo define, allá lo ocupa
+
+    string ConvertirEnMinúscula(string dato)
+    {
+        return dato.ToLower() + " XD";
+    }
+
+    DateTime now = DateTime.Now;
+
+    var nombres = new List<string>() { "Lel", "Pepi", "Mini", "Emma" };
+}
+
+<div class="text-center">
+
+    <h1>@ViewData["Title"]</h1>
+
+    <img id="foto" src="~/imagenes/tecleando.jpg" />
+
+    <h3>@Model.Nombre.ToUpper()</h3>
+    <h3>@ConvertirEnMinúscula(Model.Nombre)</h3>
+
+    <h3>@Model.Edad</h3>
+
+    @if (Model.Edad < 30)
+    {
+        <h2>Soy joven</h2>
+    }
+    else
+    {
+        <h2>Soy viejo</h2>
+    }
+
+    <h3>Hoy es @now</h3>
+    <h3>Hoy es @now.ToString("dd/MM/yyyy hh:mm:ss tt")</h3>
+
+    <ul>
+        @foreach (var nombre in nombres)
+        {
+            <li>@nombre</li>
+        }
+    </ul>
+
+    @* <h3>@Model</h3>  p' el @model string;' *@
+
+    @* <h3>@ViewBag.Nombre</h3> *@
+    @* <h3>Tengo @ViewBag.Edad</h3> *@
+</div>
