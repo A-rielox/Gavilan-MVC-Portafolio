@@ -5,9 +5,40 @@
 }
 
 
+
+
 <partial name="_Presentacion" />
 
 <partial name="_Habilidades" />
 
 <partial name="_SeccionProyectos" model="Model.Proyectos" />
 
+
+
+
+<h1>ejemp 1</h1>
+<div>
+    Guid transitorio : <b>@Model.EjemploGUID_1.Transitorio</b> @* transient es siempre != *@
+</div>
+
+<div>
+    Guid delimitado : <b>@Model.EjemploGUID_1.Delimitado</b> @* el mismo p'un request *@
+</div>
+
+<div>
+    Guid único : <b>@Model.EjemploGUID_1.Unico</b> @* el mismo mientras esta viva la aplicacion *@
+</div>
+
+
+<h1>ejemp 2</h1>
+<div>
+    Guid transitorio : <b>@Model.EjemploGUID_2.Transitorio</b>@* transient es siempre != *@
+</div>
+
+<div>
+    Guid delimitado : <b>@Model.EjemploGUID_2.Delimitado</b> @* el mismo p'un request *@
+</div>
+
+<div>
+    Guid único : <b>@Model.EjemploGUID_2.Unico</b> @* el mismo mientras esta viva la aplicacion *@
+</div>

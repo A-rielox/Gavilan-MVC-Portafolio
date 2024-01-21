@@ -1,44 +1,43 @@
-﻿namespace Portafolio.Servicios
+﻿namespace Portafolio.Servicios;
+
+public class ServicioUnico
 {
-    public class ServicioUnico
+    public ServicioUnico()
     {
-        public ServicioUnico()
-        {
-            ObtenerGuid = Guid.NewGuid();
-        }
-
-
-        //////////////////////////////////////
-        public Guid ObtenerGuid { get; private set; }
+        ObtenerGuid = Guid.NewGuid();
     }
 
 
     //////////////////////////////////////
-    ///
-    public class ServicioDelimitado
+    public Guid ObtenerGuid { get; private set; }
+}
+
+
+//////////////////////////////////////
+///
+public class ServicioDelimitado
+{
+    public ServicioDelimitado()
     {
-        public ServicioDelimitado()
-        {
-            ObtenerGuid = Guid.NewGuid();
-        }
-
-
-        //////////////////////////////////////
-        public Guid ObtenerGuid { get; private set; }
+        ObtenerGuid = Guid.NewGuid();
     }
 
 
     //////////////////////////////////////
-    ///
-    public class ServicioTransitorio
+    public Guid ObtenerGuid { get; private set; }
+}
+
+
+//////////////////////////////////////
+///
+public class ServicioTransitorio
+{
+    public ServicioTransitorio()
     {
-        public ServicioTransitorio()
-        {
-            ObtenerGuid = Guid.NewGuid();
-        }
-
-
-        //////////////////////////////////////
-        public Guid ObtenerGuid { get; private set; }
+        ObtenerGuid = Guid.NewGuid();
     }
+
+
+    //////////////////////////////////////
+    public Guid ObtenerGuid { get; private set; }
 }
